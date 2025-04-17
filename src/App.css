@@ -239,7 +239,7 @@ a {
 .headline {
   padding: 1rem 1rem 2rem;
   background-color: #f5f5f5;
-  height: 75vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -667,8 +667,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background-color: #0a0a23;
-  color: #fff;
+  /* background-color: #0a0a23; */
+  color:#0a0a23;
 }
 
 .header__logo img {
@@ -682,20 +682,54 @@ a {
 }
 
 .header__nav a {
-  margin-left: 20px;
-  color: #fff;
+  margin-left: 1rem;
+  color: #0a0a23;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(to right, #1d3557, #457b9d);
-  color: white;
+  /* background: linear-gradient(to right, #000000,  #818181); */
+  /* background: url(https://img1.wsimg.com/isteam/stock/12800/:/rs=w:1500,h:1000,cg:true,m/cr=w:1500,h:1000); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 400px;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
 }
 
+/* .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  background-color: rgba(0, 0, 0, 0.027);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+} */
+
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 6rem;
+  font-weight: 500;
+  color: rgb(8, 8, 10);
   margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .hero__cta {
@@ -708,6 +742,14 @@ a {
   font-weight: bold;
 }
 
+.sobre h2,
+.servicos h2,
+.valores h2,
+.contato h2 {
+  font-size: 2rem;
+  margin: 0 0 2rem;
+}
+
 .sobre,
 .servicos,
 .valores,
@@ -716,6 +758,65 @@ a {
   background-color: #fff;
   text-align: center;
 }
+
+.sobre {
+  padding: 60px 5%;
+  background-color: #ffffff;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sobre__mvv {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  text-align: left;
+}
+
+.sobre__card {
+  background-color: #f1f1f1;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.sobre__card:hover {
+  transform: translateY(-5px);
+}
+
+.sobre__card h3,
+.servicos h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #1d3557;
+}
+
+.sobre__card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sobre__card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.sobre__card li {
+  margin-bottom: 1rem;
+  list-style-type: "✅ ";
+}
+
+
 
 .cards {
   display: flex;
@@ -728,7 +829,7 @@ a {
 .card {
   background-color: #f1f1f1;
   padding: 20px;
-  width: 280px;
+  width: 45%;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s;
@@ -816,4 +917,92 @@ a {
 .footer img {
   height: 40px;
   margin-bottom: 10px;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+
+/**/
+
+.workflow {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.workflow h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.workflow__etapas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.workflow__card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.workflow__card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.workflow__card p {
+  color: #555;
+}
+
+
+/**/
+
+
+.scroll-indicator {
+  text-align: center;
+  font-size: 1rem !important;
+  /* display: none; */  
+  color: #000000;
+  padding: 1  rem 0;
+  /* margin-top: -1rem; */
+  animation: bounce 2s infinite;
+  cursor: default;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(6px);
+  }
 }
