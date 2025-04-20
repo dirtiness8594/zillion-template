@@ -1,6 +1,13 @@
 import { useForm } from 'react-hook-form';
 import './App.css';
 import { LuMouse } from "react-icons/lu";
+import { FaArrowRight, FaInfo } from "react-icons/fa";
+import { BsFileBarGraph } from "react-icons/bs";
+import { TbCash } from "react-icons/tb";
+import { CiBoxes, CiPhone } from "react-icons/ci";
+import { CiCircleInfo } from "react-icons/ci";
+import { SlMagnifier } from "react-icons/sl";
+import { GoRocket } from "react-icons/go";
 
 
 function App() {
@@ -35,10 +42,10 @@ function App() {
             <section className="hero">
                 <h1>Transformamos ideias em resultados</h1>
                 <p>Consultoria estratégica para empresas que querem crescer com inteligência.</p>
-                <a href="#contato" className="hero__cta">Fale com um especialista</a>
+                <a href="#contato" className="hero__cta">Fale com um especialista <FaArrowRight /></a>
+            <p className="  scroll-indicator"><LuMouse /> Role para saber mais</p>
             </section>
 
-                <p className="  scroll-indicator"><LuMouse /> Role para saber mais</p>
             <section id="sobre" className="sobre">
                 <h2>Quem Somos</h2>
                 <p>
@@ -49,7 +56,7 @@ function App() {
                     <div className="sobre__card">
                         <h3>🌟 Visão</h3>
                         <p>
-                            Conectando Empresas Para Gerar Prosperidade Local. Na Zillion Business Center, vislumbramos um ecossistema empresarial vibrante e próspero no Triângulo Mineiro. O sucesso de uma empresa não é uma jornada solitária — é a soma de colaborações estratégicas, trocas de experiências e apoio mútuo. Apesar de priorizarmos o desenvolvimento regional, acreditamos que negócios com base tecnológica devem pensar globalmente.
+                            Conectando Empresas Para Gerar Prosperidade Local. Na Zillion Business Center, vislumbramos um ecossistema empresarial vibrante e próspero no Triângulo Mineiro. O sucesso de uma empresa não é uma jornada solitária — é a soma de colaborações estratégicas, trocas de experiências e apoio mútuo.
                         </p>
                     </div>
 
@@ -73,47 +80,67 @@ function App() {
                 </div>
             </section>
 
+            <section className="workflow">
+                <div className="workflow__content">
+                    <h2>Como Funciona</h2>
+                    <p>Nosso processo é <b>simples</b>, direto e focado em resultados concretos.</p>
+                    <div className="workflow__etapas">
+                        <div className="workflow__card">
+                            <span>01</span>
+                            <h3><CiPhone />Reunião Inicial</h3>
+                            <p>Entendemos seus desafios e objetivos em um bate-papo estratégico.</p>
+                        </div>
+                        <div className="workflow__card">
+                        <span>02</span>
+
+                            <h3><SlMagnifier />Diagnóstico</h3>
+                            <p>Analisamos seu negócio e identificamos oportunidades e pontos de melhoria.</p>
+                        </div>
+                        <div className="workflow__card">
+                        <span>03</span>
+
+                            <h3><GoRocket />Implementação</h3>
+                            <p>Aplicamos soluções personalizadas e acompanhamos os resultados junto com você.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
 
             <section id="servicos" className="servicos">
                 <h2>Serviços</h2>
+                <p className="servicos__info">
+                    Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
+                </p>
                 <div className="cards">
                     <div className="card">
+                        <div className="card__icon">
+                        <CiBoxes />
+                        </div>
                         <h3>Planejamento Estratégico</h3>
                         <p>Alinhamento de metas, visão e ações para crescimento sustentável.</p>
+                        <a href="">Saiba mais <FaArrowRight /></a>
                     </div>
                     <div className="card">
+                        <div className="card__icon">
+                        <TbCash />
+                        </div>
                         <h3>Gestão Financeira</h3>
                         <p>Controle e otimização dos recursos financeiros do seu negócio.</p>
+                        <a href="">Saiba mais <FaArrowRight /></a>
                     </div>
                     <div className="card">
+                        <div className="card__icon">
+                        <BsFileBarGraph />
+                        </div>
                         <h3>Marketing e Vendas</h3>
                         <p>Posicionamento, presença digital e aumento da conversão.</p>
-                    </div>
-                    <div className="card">
-                        <h3>Implantação</h3>
-                        <p>Posicionamento, presença digital e aumento da conversão.</p>
+                        <a href="">Saiba mais <FaArrowRight /></a>
                     </div>
                 </div>
             </section>
 
-            <section className="workflow">
-                <h2>Como Funciona</h2>
-                <p>Nosso processo é simples, direto e focado em resultados concretos.</p>
-                <div className="workflow__etapas">
-                    <div className="workflow__card">
-                        <h3>📞 Reunião Inicial</h3>
-                        <p>Entendemos seus desafios e objetivos em um bate-papo estratégico.</p>
-                    </div>
-                    <div className="workflow__card">
-                        <h3>🔍 Diagnóstico</h3>
-                        <p>Analisamos seu negócio e identificamos oportunidades e pontos de melhoria.</p>
-                    </div>
-                    <div className="workflow__card">
-                        <h3>🚀 Implementação</h3>
-                        <p>Aplicamos soluções personalizadas e acompanhamos os resultados junto com você.</p>
-                    </div>
-                </div>
-            </section>
+         
 
             <section id="valores" className="valores">
                 <h2>Nossos Diferenciais</h2>
@@ -128,6 +155,9 @@ function App() {
 
             <section id="contato" className="contato">
                 <h2>Entre em Contato</h2>
+                <p className="servicos__info">
+                    <CiCircleInfo />Retornaremos seu contato em até <b>24h</b>, por isto, informe seu e-mail preferido.
+                </p>
                 <form onSubmit={handleSubmit(onSubmit)} className="form">
                     <input type="text" {...register('nome', { required: true })} placeholder="Seu nome" />
                     <input type="email" {...register('email', { required: true })} placeholder="Seu email" />
