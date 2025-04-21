@@ -79,14 +79,14 @@ function App() {
             </header>
 
 
-            {/* <section className="hero">
+            <section className="hero">
                 <h1>Transformamos ideias em resultados</h1>
                 <p>Consultoria estratégica para empresas que querem crescer com inteligência.</p>
                 <a href="#contato" className="hero__cta">Fale com um especialista <FaArrowRight /></a>
             <p className="  scroll-indicator"><LuMouse /> Role para saber mais</p>
-            </section> */}
+            </section>
 
-            {/* <section id="sobre" className="sobre">
+            <section id="sobre" className="sobre">
                 <h2>Quem Somos</h2>
                 <p>
                     Somos a <strong>Zillion Business Center</strong>, uma empresa com mais de 10 anos de experiência ajudando negócios a crescerem com planejamento, inovação e resultado. Acreditamos que a colaboração é o caminho mais poderoso para impulsionar o ecossistema empresarial.
@@ -209,7 +209,7 @@ function App() {
                     <img src="https://yourlogo.com/logo.png" alt="Logo rodapé" />
                 </div>
                 <p>© {new Date().getFullYear()} Empresaria Consultoria. Todos os direitos reservados.</p>
-            </footer> */}
+            </footer>
 
             <a
                 href="https://wa.me/5511999999999"
