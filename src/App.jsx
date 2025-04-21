@@ -1,16 +1,24 @@
+import React, { useState } from 'react';
+
 import { useForm } from 'react-hook-form';
 import './App.css';
 import { LuMouse } from "react-icons/lu";
-import { FaArrowRight, FaInfo } from "react-icons/fa";
+import { FaArrowRight, FaInfo, FaBars, FaTimes } from "react-icons/fa";
 import { BsFileBarGraph } from "react-icons/bs";
 import { TbCash } from "react-icons/tb";
 import { CiBoxes, CiPhone } from "react-icons/ci";
-import { CiCircleInfo } from "react-icons/ci";
+import { CiCircleInfo, CiStickyNote } from "react-icons/ci";
 import { SlMagnifier } from "react-icons/sl";
 import { GoRocket } from "react-icons/go";
+import { LuLampDesk } from "react-icons/lu";
+import { TfiTarget } from "react-icons/tfi";
 
 
 function App() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+
     const {
         register,
         handleSubmit,
@@ -26,10 +34,18 @@ function App() {
     return (
         <>
             <header className="header">
-                <div className="header__logo">
-                    <img src="https://img1.wsimg.com/isteam/ip/0a84f097-dbcb-4e7d-8d71-7793e8793494/logo-zillionAtivo%201.png/:/rs=w:394,h:75,cg:true,m/cr=w:394,h:75/qt=q:95" alt="Consultoria Logo" />
-                    {/* <span>Empresaria Consultoria</span> */}
+                <div className="header__top">
+                    <div className="header__logo">
+                        <img
+                            src="https://img1.wsimg.com/isteam/ip/0a84f097-dbcb-4e7d-8d71-7793e8793494/logo-zillionAtivo%201.png/:/rs=w:394,h:75,cg:true,m/cr=w:394,h:75/qt=q:95"
+                            alt="Consultoria Logo"
+                        />
+                    </div>
+                    <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
+                        <FaBars />
+                    </button>
                 </div>
+
                 <nav className="header__nav">
                     <a href="#sobre">Sobre</a>
                     <a href="#servicos">Serviços</a>
@@ -37,16 +53,40 @@ function App() {
                     <a href="#contato">Contato</a>
                     <a href="#contato">+55 (99) 1234 - 1234 </a>
                 </nav>
+
+                {menuOpen && (
+                    <div className={`mobile-menu ${menuOpen ? "show": ""}`}>
+                        <div className="mobile-menu__header">
+                            <div className="header__logo">
+                                <img
+                                    src="https://img1.wsimg.com/isteam/ip/0a84f097-dbcb-4e7d-8d71-7793e8793494/logo-zillionAtivo%201.png/:/rs=w:394,h:75,cg:true,m/cr=w:394,h:75/qt=q:95"
+                                    alt="Consultoria Logo"
+                                />
+                            </div>
+                            <button className="menu-close" onClick={() => setMenuOpen(false)}>
+                                <FaTimes />
+                            </button>
+                        </div>
+                        <div className="mobile-menu__links">
+                            <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a>
+                            <a href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</a>
+                            <a href="#valores" onClick={() => setMenuOpen(false)}>Diferenciais</a>
+                            <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
+                            <a href="#contato" onClick={() => setMenuOpen(false)}>+55 (99) 1234 - 1234 </a>
+                        </div>
+                    </div>
+                )}
             </header>
 
-            <section className="hero">
+
+            {/* <section className="hero">
                 <h1>Transformamos ideias em resultados</h1>
                 <p>Consultoria estratégica para empresas que querem crescer com inteligência.</p>
                 <a href="#contato" className="hero__cta">Fale com um especialista <FaArrowRight /></a>
             <p className="  scroll-indicator"><LuMouse /> Role para saber mais</p>
-            </section>
+            </section> */}
 
-            <section id="sobre" className="sobre">
+            {/* <section id="sobre" className="sobre">
                 <h2>Quem Somos</h2>
                 <p>
                     Somos a <strong>Zillion Business Center</strong>, uma empresa com mais de 10 anos de experiência ajudando negócios a crescerem com planejamento, inovação e resultado. Acreditamos que a colaboração é o caminho mais poderoso para impulsionar o ecossistema empresarial.
@@ -54,21 +94,21 @@ function App() {
 
                 <div className="sobre__mvv">
                     <div className="sobre__card">
-                        <h3>🌟 Visão</h3>
+                        <h3><CiStickyNote /> Visão <FaArrowRight /></h3>
                         <p>
                             Conectando Empresas Para Gerar Prosperidade Local. Na Zillion Business Center, vislumbramos um ecossistema empresarial vibrante e próspero no Triângulo Mineiro. O sucesso de uma empresa não é uma jornada solitária — é a soma de colaborações estratégicas, trocas de experiências e apoio mútuo.
                         </p>
                     </div>
 
                     <div className="sobre__card">
-                        <h3>🎯 Missão</h3>
+                        <h3><TfiTarget /> Missão <FaArrowRight /></h3>
                         <p>
                             Construir Pontes para o Futuro Empresarial Sustentável. Nossa missão é conectar empreendedores visionários a oportunidades valiosas e recursos cruciais, oferecendo um ambiente propício à inovação, aprendizado e crescimento — onde startups e empresas maduras possam florescer.
                         </p>
                     </div>
 
                     <div className="sobre__card">
-                        <h3>💡 Valores</h3>
+                        <h3><LuLampDesk /> Valores <FaArrowRight /></h3>
                         <ul>
                             <li>Ética e transparência</li>
                             <li>Colaboração acima da competição</li>
@@ -140,8 +180,6 @@ function App() {
                 </div>
             </section>
 
-         
-
             <section id="valores" className="valores">
                 <h2>Nossos Diferenciais</h2>
                 <div className="valores__grid">
@@ -171,7 +209,7 @@ function App() {
                     <img src="https://yourlogo.com/logo.png" alt="Logo rodapé" />
                 </div>
                 <p>© {new Date().getFullYear()} Empresaria Consultoria. Todos os direitos reservados.</p>
-            </footer>
+            </footer> */}
 
             <a
                 href="https://wa.me/5511999999999"

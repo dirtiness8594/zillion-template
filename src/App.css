@@ -233,6 +233,119 @@ a {
   font-size: 1.5rem;
 }
 
+
+
+/**/
+/**/
+
+/* MOBILE MENU BASE STYLES */
+.menu-toggle {
+  background: none;
+  border: none;
+  display: none;
+  font-size: 1.8rem;
+  justify-content: center;
+  color: #000;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #11297b;
+  color: white;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+body.menu-open .mobile-menu {
+  display: flex;
+}
+
+.mobile-menu.show {
+  opacity: 1;
+}
+
+.mobile-menu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-close {
+  background: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mobile-menu__links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* OPTIONAL: Hide desktop nav on small screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem !important;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header__top {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.menu-toggle, .menu-close {
+  background: #11297b;
+  border: none;
+  padding: .5rem 0;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+}
+
+
+
+.menu-close {
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  color: white;
+}
+
+/**/
+/**/
+
+
+
+
 /* Headline */
 
 .headline {
@@ -717,7 +830,7 @@ a {
 
 .sobre {
   padding: 60px 5%;
-  background: linear-gradient(to bottom left, #c1d1f0, #bcd4f7, #cfdff5);
+  background: linear-gradient(to bottom left, #1d4491, #3d68a8, #1a3d6d);
   /* background-color: rgb(176, 200, 247); */
   border-radius: 1rem;
   text-align: center;
@@ -726,7 +839,8 @@ a {
 }
 
 .sobre h2 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  color: white;
 }
 
 .sobre p {
@@ -749,7 +863,7 @@ a {
 }
 
 .sobre__mvv {
-  display: grid;
+  display: flex;
   gap: 1rem;
   /* justify-content: center; */
   place-items: center;
@@ -786,7 +900,7 @@ a {
 .sobre__card ul {
   padding-left: 20px;
   margin: 0;
-  width: 50%;
+  /* width: 50%; */
   margin: auto;
   display: none;
 }
