@@ -4,7 +4,6 @@ import { LuLampDesk } from "react-icons/lu";
 import { TfiTarget } from "react-icons/tfi";
 import { FaArrowRight } from "react-icons/fa";
 
-
 const About = () => {
 
     return (
