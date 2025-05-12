@@ -3,7 +3,7 @@ import React from 'react';
 const Values = () => {
 
     return (
-        <section id="valores" className="valores">
+        <section id="values" className="valores">
             <h2>Nossos Diferenciais</h2>
             <div className="valores__grid">
                 <div className="valores__card">✅ Atendimento personalizado</div>

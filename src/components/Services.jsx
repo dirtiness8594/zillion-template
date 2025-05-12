@@ -7,7 +7,7 @@ import { CiBoxes } from "react-icons/ci";
 const Services = () => {
 
     return (
-        <section id="servicos" className="servicos">
+        <section id="services" className="servicos">
             <h2>Serviços</h2>
             <p className="servicos__info">
                 Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet

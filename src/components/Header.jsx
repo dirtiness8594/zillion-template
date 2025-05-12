@@ -19,10 +19,10 @@ const Header = () => {
             </div>
 
             <nav className="header__nav">
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#valores">Diferenciais</a>
-                <a href="#contato">Contato</a>
+                <a href="#about">Sobre</a>
+                <a href="#services">Serviços</a>
+                <a href="#workflow">Diferenciais</a>
+                <a href="#contact">Contato</a>
                 <a href="#contato">+55 (99) 1234 - 1234 </a>
             </nav>
 

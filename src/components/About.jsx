@@ -9,7 +9,7 @@ import { MyTab, Tab, Content } from 'tab-react-simple';
 const About = () => {
 
     return (
-        <section id="sobre" className="sobre">
+        <section id="about" className="sobre">
             <h2>Quem Somos</h2>
             <p>
                 Somos a <strong>Zillion Business Center</strong>, uma empresa com mais de 10 anos de experiência ajudando negócios a crescerem com planejamento, inovação e resultado. Acreditamos que a colaboração é o caminho mais poderoso para impulsionar o ecossistema empresarial.

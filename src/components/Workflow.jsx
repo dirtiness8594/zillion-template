@@ -6,7 +6,7 @@ import { GoRocket } from "react-icons/go";
 const Workflow = () => {
 
     return (
-        <section className="workflow">
+        <section id="workflow" className="workflow">
             <div className="workflow__content">
                 <h2>Como Funciona</h2>
                 <p>Nosso processo é <b>simples</b>, direto e focado em resultados concretos.</p>

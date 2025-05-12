@@ -17,7 +17,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contato" className="contato">
+        <section id="contact" className="contato">
             <h2>Entre em Contato</h2>
             <p className="servicos__info">
                 <CiCircleInfo />Retornaremos seu contato em até <b>24h</b>, por isto, informe seu e-mail preferido.
