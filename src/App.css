@@ -1229,3 +1229,27 @@ a {
     transform: translateY(6px);
   }
 }
+
+._simtabs {
+  width: 100%;
+}
+
+._simtabs__tablist {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 0 1rem;
+  width: 100%;
+}
+
+._simtabs__tab {
+  background-color: unset;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+._simtabs__tab--active {
+  border-color: rgb(247, 247, 247);
+}
