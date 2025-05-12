@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { CiCircleInfo } from "react-icons/ci";
+import contactData from '../data/contact.json';
 
 const Contact = () => {
-
     const {
         register,
         handleSubmit,
@@ -18,15 +18,24 @@ const Contact = () => {
 
     return (
         <section id="contact" className="contato">
-            <h2>Entre em Contato</h2>
+            <h2>{contactData.title}</h2>
             <p className="servicos__info">
-                <CiCircleInfo />Retornaremos seu contato em até <b>24h</b>, por isto, informe seu e-mail preferido.
+                <CiCircleInfo />
+                <span dangerouslySetInnerHTML={{ __html: contactData.description }}></span>
             </p>
             <form onSubmit={handleSubmit(onSubmit)} className="form">
-                <input type="text" {...register('nome', { required: true })} placeholder="Seu nome" />
-                <input type="email" {...register('email', { required: true })} placeholder="Seu email" />
-                <textarea {...register('mensagem', { required: true })} placeholder="Sua mensagem" />
-                <button type="submit">Enviar</button>
+                {contactData.fields.map((field, index) => {
+                    const InputComponent = field.type === "textarea" ? "textarea" : "input";
+                    return (
+                        <InputComponent
+                            key={index}
+                            type={field.type !== "textarea" ? field.type : undefined}
+                            {...register(field.name, { required: field.required })}
+                            placeholder={field.placeholder}
+                        />
+                    );
+                })}
+                <button type="submit">{contactData.buttonText}</button>
             </form>
         </section>
     );

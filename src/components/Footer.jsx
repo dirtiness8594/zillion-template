@@ -1,13 +1,13 @@
 import React from 'react';
+import footerData from '../data/footer.json';
 
 const Footer = () => {
-
     return (
         <footer className="footer">
             <div className="footer__logo">
-                <img src="https://yourlogo.com/logo.png" alt="Logo rodapé" />
+                <img src={footerData.logo} alt="Logo rodapé" />
             </div>
-            <p>© {new Date().getFullYear()} Empresaria Consultoria. Todos os direitos reservados.</p>
+            <p>{footerData.copyrightText} {new Date().getFullYear()}</p>
         </footer>
     );
 };

@@ -1,0 +1,24 @@
+{
+    "title": "Como Funciona",
+    "description": "Nosso processo é <b>simples</b>, direto e focado em resultados concretos.",
+    "steps": [
+        {
+            "number": "01",
+            "title": "Reunião Inicial",
+            "icon": "CiPhone",
+            "description": "Entendemos seus desafios e objetivos em um bate-papo estratégico."
+        },
+        {
+            "number": "02",
+            "title": "Diagnóstico",
+            "icon": "SlMagnifier",
+            "description": "Analisamos seu negócio e identificamos oportunidades e pontos de melhoria."
+        },
+        {
+            "number": "03",
+            "title": "Implementação",
+            "icon": "GoRocket",
+            "description": "Aplicamos soluções personalizadas e acompanhamos os resultados junto com você."
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Entre em Contato",
+    "description": "Retornaremos seu contato em até <b>24h</b>, por isso, informe seu e-mail preferido.",
+    "fields": [
+        {
+            "name": "nome",
+            "type": "text",
+            "placeholder": "Seu nome",
+            "required": true
+        },
+        {
+            "name": "email",
+            "type": "email",
+            "placeholder": "Seu email",
+            "required": true
+        },
+        {
+            "name": "mensagem",
+            "type": "textarea",
+            "placeholder": "Sua mensagem",
+            "required": true
+        }
+    ],
+    "buttonText": "Enviar"
+}

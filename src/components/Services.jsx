@@ -3,40 +3,33 @@ import { FaArrowRight } from "react-icons/fa";
 import { BsFileBarGraph } from "react-icons/bs";
 import { TbCash } from "react-icons/tb";
 import { CiBoxes } from "react-icons/ci";
+import servicesData from '../data/services.json';
+
+const iconMap = {
+    CiBoxes: CiBoxes,
+    TbCash: TbCash,
+    BsFileBarGraph: BsFileBarGraph
+};
 
 const Services = () => {
-
     return (
         <section id="services" className="servicos">
-            <h2>Serviços</h2>
-            <p className="servicos__info">
-                Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet
-            </p>
+            <h2>{servicesData.title}</h2>
+            <p className="servicos__info">{servicesData.description}</p>
             <div className="cards">
-                <div className="card">
-                    <div className="card__icon">
-                        <CiBoxes />
-                    </div>
-                    <h3>Planejamento Estratégico</h3>
-                    <p>Alinhamento de metas, visão e ações para crescimento sustentável.</p>
-                    <a href="">Saiba mais <FaArrowRight /></a>
-                </div>
-                <div className="card">
-                    <div className="card__icon">
-                        <TbCash />
-                    </div>
-                    <h3>Gestão Financeira</h3>
-                    <p>Controle e otimização dos recursos financeiros do seu negócio.</p>
-                    <a href="">Saiba mais <FaArrowRight /></a>
-                </div>
-                <div className="card">
-                    <div className="card__icon">
-                        <BsFileBarGraph />
-                    </div>
-                    <h3>Marketing e Vendas</h3>
-                    <p>Posicionamento, presença digital e aumento da conversão.</p>
-                    <a href="">Saiba mais <FaArrowRight /></a>
-                </div>
+                {servicesData.services.map((service, index) => {
+                    const IconComponent = iconMap[service.icon];
+                    return (
+                        <div key={index} className="card">
+                            <div className="card__icon">
+                                <IconComponent />
+                            </div>
+                            <h3>{service.title}</h3>
+                            <p>{service.description}</p>
+                            <a href={service.link}>Saiba mais <FaArrowRight /></a>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );

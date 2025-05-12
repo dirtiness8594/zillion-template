@@ -1,0 +1,27 @@
+{
+    "title": "Quem Somos",
+    "description": "Somos a <strong>Zillion Business Center</strong>, uma empresa com mais de 10 anos de experiência ajudando negócios a crescerem com planejamento, inovação e resultado. Acreditamos que a colaboração é o caminho mais poderoso para impulsionar o ecossistema empresarial.",
+    "sections": [
+        {
+            "title": "Visão",
+            "icon": "CiStickyNote",
+            "text": "Conectando Empresas Para Gerar Prosperidade Local. Na Zillion Business Center, vislumbramos um ecossistema empresarial vibrante e próspero no Triângulo Mineiro. O sucesso de uma empresa não é uma jornada solitária — é a soma de colaborações estratégicas, trocas de experiências e apoio mútuo."
+        },
+        {
+            "title": "Missão",
+            "icon": "TfiTarget",
+            "text": "Construir Pontes para o Futuro Empresarial Sustentável. Nossa missão é conectar empreendedores visionários a oportunidades valiosas e recursos cruciais, oferecendo um ambiente propício à inovação, aprendizado e crescimento — onde startups e empresas maduras possam florescer."
+        },
+        {
+            "title": "Valores",
+            "icon": "LuLampDesk",
+            "list": [
+                "Ética e transparência",
+                "Colaboração acima da competição",
+                "Fomento à inovação",
+                "Compromisso com resultados sustentáveis",
+                "Responsabilidade social e regional"
+            ]
+        }
+    ]
+}

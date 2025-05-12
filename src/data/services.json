@@ -1,0 +1,24 @@
+{
+    "title": "Serviços",
+    "description": "Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet",
+    "services": [
+        {
+            "title": "Planejamento Estratégico",
+            "icon": "CiBoxes",
+            "description": "Alinhamento de metas, visão e ações para crescimento sustentável.",
+            "link": ""
+        },
+        {
+            "title": "Gestão Financeira",
+            "icon": "TbCash",
+            "description": "Controle e otimização dos recursos financeiros do seu negócio.",
+            "link": ""
+        },
+        {
+            "title": "Marketing e Vendas",
+            "icon": "BsFileBarGraph",
+            "description": "Posicionamento, presença digital e aumento da conversão.",
+            "link": ""
+        }
+    ]
+}
