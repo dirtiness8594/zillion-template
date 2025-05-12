@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Values = () => {
-
     return (
         <section id="values" className="valores">
             <h2>Nossos Diferenciais</h2>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { FaArrowRight } from "react-icons/fa";
-import { BsFileBarGraph } from "react-icons/bs";
-import { TbCash } from "react-icons/tb";
-import { CiBoxes } from "react-icons/ci";
+import { FaArrowRight } from 'react-icons/fa';
+import { BsFileBarGraph } from 'react-icons/bs';
+import { TbCash } from 'react-icons/tb';
+import { CiBoxes } from 'react-icons/ci';
 import servicesData from '../data/services.json';
 
 const iconMap = {
     CiBoxes: CiBoxes,
     TbCash: TbCash,
-    BsFileBarGraph: BsFileBarGraph
+    BsFileBarGraph: BsFileBarGraph,
 };
 
 const Services = () => {
@@ -26,7 +26,9 @@ const Services = () => {
                             </div>
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>
-                            <a href={service.link}>Saiba mais <FaArrowRight /></a>
+                            <a href={service.link}>
+                                Saiba mais <FaArrowRight />
+                            </a>
                         </div>
                     );
                 })}

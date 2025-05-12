@@ -7,7 +7,9 @@ const Footer = () => {
             <div className="footer__logo">
                 <img src={footerData.logo} alt="Logo rodapé" />
             </div>
-            <p>{footerData.copyrightText} {new Date().getFullYear()}</p>
+            <p>
+                {footerData.copyrightText} {new Date().getFullYear()}
+            </p>
         </footer>
     );
 };

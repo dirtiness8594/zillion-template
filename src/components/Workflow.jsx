@@ -1,13 +1,13 @@
 import React from 'react';
-import { CiPhone } from "react-icons/ci";
-import { SlMagnifier } from "react-icons/sl";
-import { GoRocket } from "react-icons/go";
+import { CiPhone } from 'react-icons/ci';
+import { SlMagnifier } from 'react-icons/sl';
+import { GoRocket } from 'react-icons/go';
 import workflowData from '../data/workflow.json';
 
 const iconMap = {
     CiPhone: CiPhone,
     SlMagnifier: SlMagnifier,
-    GoRocket: GoRocket
+    GoRocket: GoRocket,
 };
 
 const Workflow = () => {
@@ -22,7 +22,9 @@ const Workflow = () => {
                         return (
                             <div key={index} className="workflow__card">
                                 <span>{step.number}</span>
-                                <h3><IconComponent /> {step.title}</h3>
+                                <h3>
+                                    <IconComponent /> {step.title}
+                                </h3>
                                 <p>{step.description}</p>
                             </div>
                         );

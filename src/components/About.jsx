@@ -1,15 +1,15 @@
 import React from 'react';
-import { CiStickyNote } from "react-icons/ci";
-import { LuLampDesk } from "react-icons/lu";
-import { TfiTarget } from "react-icons/tfi";
-import { FaArrowRight } from "react-icons/fa";
+import { CiStickyNote } from 'react-icons/ci';
+import { LuLampDesk } from 'react-icons/lu';
+import { TfiTarget } from 'react-icons/tfi';
+import { FaArrowRight } from 'react-icons/fa';
 import { MyTab, Tab, Content } from 'tab-react-simple';
 import aboutData from '../data/about.json';
 
 const iconMap = {
     CiStickyNote: CiStickyNote,
     TfiTarget: TfiTarget,
-    LuLampDesk: LuLampDesk
+    LuLampDesk: LuLampDesk,
 };
 
 const About = () => {
@@ -24,7 +24,9 @@ const About = () => {
                         const IconComponent = iconMap[section.icon];
                         return (
                             <Tab key={index}>
-                                <h3><IconComponent /> {section.title} <FaArrowRight /></h3>
+                                <h3>
+                                    <IconComponent /> {section.title} <FaArrowRight />
+                                </h3>
                             </Tab>
                         );
                     })}
@@ -32,7 +34,9 @@ const About = () => {
                         <Content key={index}>
                             {section.list ? (
                                 <ul>
-                                    {section.list.map((item, idx) => <li key={idx}>{item}</li>)}
+                                    {section.list.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
                                 </ul>
                             ) : (
                                 <p>{section.text}</p>

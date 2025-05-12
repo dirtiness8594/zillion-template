@@ -18,12 +18,14 @@ const Header = () => {
 
             <nav className="header__nav">
                 {headerData.menuItems.map((item, index) => (
-                    <a key={index} href={item.href}>{item.label}</a>
+                    <a key={index} href={item.href}>
+                        {item.label}
+                    </a>
                 ))}
             </nav>
 
             {menuOpen && (
-                <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+                <div className={`mobile-menu ${menuOpen ? 'show' : ''}`}>
                     <div className="mobile-menu__header">
                         <div className="header__logo">
                             <img src={headerData.logo} alt="Consultoria Logo" />
@@ -34,7 +36,9 @@ const Header = () => {
                     </div>
                     <div className="mobile-menu__links">
                         {headerData.menuItems.map((item, index) => (
-                            <a key={index} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
+                            <a key={index} href={item.href} onClick={() => setMenuOpen(false)}>
+                                {item.label}
+                            </a>
                         ))}
                     </div>
                 </div>

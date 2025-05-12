@@ -1,6 +1,6 @@
 import React from 'react';
-import { LuMouse } from "react-icons/lu";
-import { FaArrowRight } from "react-icons/fa";
+import { LuMouse } from 'react-icons/lu';
+import { FaArrowRight } from 'react-icons/fa';
 import heroData from '../data/hero.json';
 
 const Hero = () => {

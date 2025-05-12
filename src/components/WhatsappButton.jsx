@@ -1,7 +1,6 @@
 import React from 'react';
 
 const WhatsappButton = () => {
-
     return (
         <a
             href="https://wa.me/5511999999999"

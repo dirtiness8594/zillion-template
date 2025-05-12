@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { CiCircleInfo } from "react-icons/ci";
+import { CiCircleInfo } from 'react-icons/ci';
 import contactData from '../data/contact.json';
 
 const Contact = () => {
@@ -11,7 +11,7 @@ const Contact = () => {
         reset,
     } = useForm();
 
-    const onSubmit = (data) => {
+    const onSubmit = data => {
         console.log('Form submitted:', data);
         reset();
     };
@@ -25,11 +25,11 @@ const Contact = () => {
             </p>
             <form onSubmit={handleSubmit(onSubmit)} className="form">
                 {contactData.fields.map((field, index) => {
-                    const InputComponent = field.type === "textarea" ? "textarea" : "input";
+                    const InputComponent = field.type === 'textarea' ? 'textarea' : 'input';
                     return (
                         <InputComponent
                             key={index}
-                            type={field.type !== "textarea" ? field.type : undefined}
+                            type={field.type !== 'textarea' ? field.type : undefined}
                             {...register(field.name, { required: field.required })}
                             placeholder={field.placeholder}
                         />

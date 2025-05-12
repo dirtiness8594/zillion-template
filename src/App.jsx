@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 import './App.css';
 import Header from './components/Header';
@@ -13,7 +13,6 @@ import Footer from './components/Footer';
 import WhatsappButton from './components/WhatsappButton';
 
 function App() {
-
     return (
         <>
             <Helmet>

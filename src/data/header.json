@@ -1,25 +1,25 @@
 {
-  "logo": "https://img1.wsimg.com/isteam/ip/0a84f097-dbcb-4e7d-8d71-7793e8793494/logo-zillionAtivo%201.png/:/rs=w:394,h:75,cg:true,m/cr=w:394,h:75/qt=q:95",
-  "menuItems": [
-    {
-      "label": "Sobre",
-      "href": "#sobre"
-    },
-    {
-      "label": "Serviços",
-      "href": "#servicos"
-    },
-    {
-      "label": "Diferenciais",
-      "href": "#valores"
-    },
-    {
-      "label": "Contato",
-      "href": "#contato"
-    },
-    {
-      "label": "+55 (99) 1234 - 1234",
-      "href": "#contato"
-    }
-  ]
+    "logo": "https://img1.wsimg.com/isteam/ip/0a84f097-dbcb-4e7d-8d71-7793e8793494/logo-zillionAtivo%201.png/:/rs=w:394,h:75,cg:true,m/cr=w:394,h:75/qt=q:95",
+    "menuItems": [
+        {
+            "label": "Sobre",
+            "href": "#sobre"
+        },
+        {
+            "label": "Serviços",
+            "href": "#servicos"
+        },
+        {
+            "label": "Diferenciais",
+            "href": "#valores"
+        },
+        {
+            "label": "Contato",
+            "href": "#contato"
+        },
+        {
+            "label": "+55 (99) 1234 - 1234",
+            "href": "#contato"
+        }
+    ]
 }
